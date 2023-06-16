@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>
+  
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  
+</head>
+
+<body>
+    <a-scene id="scene-vr">
+
+
+<!-- asset management -->
+
+<!-- <a-assets>
+<a-asset-item id="playerimage"  src="e51dm deck.gltf"></a-asset-item>
+
+</a-assets> -->
+<a-assets timeout="10000">
+    <a-asset-item id="plane" src="\wwii_soviet_plane_with_interior\scene.gltf"></a-asset-item>
+</a-assets>
+
+        <!-- <a-sky color="#ECECEC"></a-sky> -->
+
+        <!-- environment   https://blog.mozvr.com/aframe-environment-component/ -->
+        <a-entity id="environment" environment="preset:tron; lighting:point; skyType:gradient ">
+
+<!-- <a-entity id="camera" camera position="0 1.6 0" >
+<a-entity id="player"  gltf-model=" #playerimage" position=" 0 1 -2" scale="0.5 0.5 0.5">
+    
+</a-entity> -->
+
+
+        </a-entity>
+        <a-entity
+            gltf-model="#plane"
+            scale=" 1 1 1"
+            position="0 10 10">
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
